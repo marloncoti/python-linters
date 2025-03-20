@@ -1,11 +1,15 @@
-import sys, os
-from utils import  helper_function  
+import os
+import sys
 
-def main():  
-  print("Ejecutando el programa")  
-  
-  user_name=input("Introduce tu nombre: ")
-  print (f"Hola, {user_name}") 
+from utils import helper_function
 
-if __name__=="__main__": 
-      main()
+
+def main():
+    print("Ejecutando el programa")
+
+    user_name = input("Introduce tu nombre: ")
+    print(f"Hola, {user_name}")
+
+
+if __name__ == "__main__":
+    main()

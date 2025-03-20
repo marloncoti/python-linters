@@ -5,3 +5,4 @@ uvicorn
 flake8  # Analisis estatico y deteccion de errores de estilo
 black   #  
 isort
+pre-commit

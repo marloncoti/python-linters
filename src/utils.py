@@ -1,6 +1,4 @@
-import datetime
-import time
+import datetime, time  
 
-
-def helper_function():
-    print("Función de utilidad ejecutada")
+def helper_function(): 
+  print ("Función de utilidad ejecutada")  

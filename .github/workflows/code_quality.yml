@@ -20,11 +20,7 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
 
-      - name: Code Quality Estandar with Flake8
-        run: flake8 .
-
-      - name: check de Formato de codigo
-        run: black --check .
-
-      - name: Check de orden de imports
-        run: isort . --check-only
+      - name: Run QualityCode
+        run: |
+          source venv/bin/activate
+          pre-commit run --all-files

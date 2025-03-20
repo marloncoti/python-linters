@@ -1,33 +1,30 @@
 name: Lint FastAPI Code
 
-on: pull_request
-branch: 
-    - main
-
+on: push
 
 jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout código
+      - name: Checkout
         uses: actions/checkout@v3
 
       - name: Configurar Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.12'
 
       - name: Instalar dependencias
         run: |
           python -m venv venv
           source venv/bin/activate
-          pip install fastapi uvicorn flake8 black isort
+          pip install -r requirements.txt
 
-      - name: Ejecutar Flake8
+      - name: Code Quality Estandar with Flake8
         run: flake8 .
 
-      - name: Ejecutar Black (modo check)
+      - name: check de Formato de codigo
         run: black --check .
 
-      - name: Ejecutar Isort (modo check)
+      - name: Check de orden de imports
         run: isort . --check-only

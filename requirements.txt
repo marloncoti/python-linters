@@ -1,5 +1,7 @@
 fastapi
 uvicorn
-flake8
-black
+#linters tools
+
+flake8  # Analisis estatico y deteccion de errores de estilo
+black   #  
 isort
